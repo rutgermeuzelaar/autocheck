@@ -13,5 +13,8 @@
       "js": ["marktplaats-auto.js"],
       "run_at": "document_idle"
     }
+  ],
+  "permissions": [
+    "https://opendata.rdw.nl/*"
   ]
 }
