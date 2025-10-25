@@ -5,7 +5,12 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "lib": [
+        "ES2021",
+        "DOM",
+        "DOM.Iterable"
+    ]
   },
   "display": "Recommended",
   "$schema": "https://json.schemastore.org/tsconfig"
