@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+  "name": "Marktplaats auto",
+  "version": "0.1",
+
+  "description": "Krijg nuttige informatie over auto's op marktplaats zoals RDW kilometertelling goedkeuring en APK verleden",
+  "icons": {
+    "48": "icons/marktplaats-auto-48.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.marktplaats.nl/v/auto-s/*"],
+      "js": ["marktplaats-auto.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
