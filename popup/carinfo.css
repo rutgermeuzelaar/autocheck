@@ -1,0 +1,64 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #2d3c4d;
+}
+
+html,
+body {
+    width: 240px;
+    height: 320px;
+}
+
+caption {
+    caption-side: top;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+th,
+td {
+    font-size: 0.8rem;
+    border-bottom: 1px solid #eeeeee;
+    text-align: left;
+    padding: 8px 10px;
+}
+
+details > summary {
+    background-color: cornflowerblue;
+    padding: 8px 5px;
+    color: #eeeeee;
+}
+
+.tooltip .tooltiptext {
+    display: none;
+    visibility: hidden;
+    width: 120px;
+    background-color: #2d3c4d;
+    color: #eeeeee;
+    position: absolute;
+    z-index: 100;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.tooltip:hover {
+    cursor: help;
+    position: relative;
+}
+
+.tooltip:hover .tooltiptext {
+    display: block;
+    visibility: visible;
+    opacity: 50;
+}
