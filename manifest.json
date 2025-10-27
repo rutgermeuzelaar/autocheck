@@ -7,14 +7,41 @@
   "icons": {
     "48": "icons/marktplaats-auto-48.png"
   },
+
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "notifications",
+    "storage",
+    "https://opendata.rdw.nl/*"
+  ],
+
+  "browser_specific_settings": {
+    "gecko": {
+      "data_collection_permissions": {
+        "required": [
+          "websiteContent"
+        ]
+      }
+    }
+  },
+
+  "browser_action": {
+    "default_icon": "icons/marktplaats-auto.svg",
+    "default_title": "Marktplaats autocheck",
+    "default_popup": "popup/carinfo.html"
+  },
+
   "content_scripts": [
     {
       "matches": ["*://*.marktplaats.nl/v/auto-s/*"],
-      "js": ["marktplaats-auto.js"],
+      "js": ["./content_scripts/marktplaats-auto.js"],
       "run_at": "document_idle"
     }
   ],
-  "permissions": [
-    "https://opendata.rdw.nl/*"
-  ]
+
+  "background": {
+    "scripts": ["./background/background.js"],
+    "persistent": false
+  }
 }
