@@ -38,27 +38,3 @@ details > summary {
     padding: 8px 5px;
     color: #eeeeee;
 }
-
-.tooltip .tooltiptext {
-    display: none;
-    visibility: hidden;
-    width: 120px;
-    background-color: #2d3c4d;
-    color: #eeeeee;
-    position: absolute;
-    z-index: 100;
-    bottom: 125%;
-    left: 50%;
-    margin-left: -60px;
-}
-
-.tooltip:hover {
-    cursor: help;
-    position: relative;
-}
-
-.tooltip:hover .tooltiptext {
-    display: block;
-    visibility: visible;
-    opacity: 50;
-}
