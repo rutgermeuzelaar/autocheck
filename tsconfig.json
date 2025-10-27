@@ -10,6 +10,9 @@
         "ES2021",
         "DOM",
         "DOM.Iterable"
+    ],
+    "typeRoots": [
+      "./types"
     ]
   },
   "display": "Recommended",
