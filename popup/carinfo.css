@@ -3,10 +3,15 @@
     color: #2d3c4d;
 }
 
-html,
+html {
+	display: flex;
+	justify-content: center;
+}
+
 body {
-    width: 240px;
-    height: 320px;
+	width: 240px;
+	height: 320px;
+	margin: 0 3%;
 }
 
 caption {
@@ -16,13 +21,6 @@ caption {
 table {
     border-collapse: collapse;
     width: 100%;
-}
-
-.container {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
 }
 
 th,
@@ -37,4 +35,48 @@ details > summary {
     background-color: cornflowerblue;
     padding: 8px 5px;
     color: #eeeeee;
+}
+
+input, textarea {
+	display: flex;
+}
+
+@font-face {
+  font-family: Kenteken;
+  src: url('kenteken.woff2') format('woff2');
+}
+
+.kenteken {
+	position: relative;
+	display: flex;
+	align-items: center;
+	width: 95%;
+	margin: 3% auto;
+	border: solid black 2px;
+	border-radius: 5px;
+}
+
+.kenteken::before {
+	content: '';
+	width: 2rem;
+	background-color: #2662a2;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-image: url('kenteken-eu-nl.svg');
+	background-size: 50% 70%;
+	top: 0;
+	bottom: 0;
+	position: absolute;
+}
+
+.kenteken-input {
+	width: 101%;
+	border: none;
+	font-size: 1.7rem;
+	font-family: Kenteken;
+	color: #111111;
+	background-color: #f4be04;
+	text-transform: uppercase;
+	padding-left: 15%;
+	text-align: center;
 }
