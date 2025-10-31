@@ -10,9 +10,6 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 (function () {
     console.log("Marktplaats auto is running...");
-    // Maybe I'm doing something wrong but from testing this feels slow and inconsistent, probably because there are a lot of elements
-    // var xpath = "//following::div[preceding::text()='Kenteken']"
-    // var match = document.evaluate(xpath, document, null, XPathResult.STRING_TYPE, null).stringValue
     var signPlate = null;
     function findSignPlate() {
         for (const div of document.querySelectorAll("div")) {
@@ -47,26 +44,6 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
             });
         });
     }
-    // async function getCarInfo(signPlate: string) {
-    //     // const url = "https://opendata.rdw.nl/api/odata/v4/m9d7-ebf2?$filter=kenteken%20eq%20%2799NBF9%27"
-    //     const url = `https://opendata.rdw.nl/api/odata/v4/m9d7-ebf2?$filter=kenteken%20eq%20'${signPlate.trim()}'`
-    //     console.log(url)
-    //     const response = await fetch(
-    //         url, {
-    //             headers: {
-    //                 "OData-Version": "4.0",
-    //                 "OData-MaxVersion": "4.0"
-    //             }
-    //         }
-    //     )
-    //     if (response.ok) {
-    //         const json = await response.json()
-    //         return json["value"][0]
-    //     }
-    //     else {
-    //         console.log(response.statusText)
-    //     }
-    // }
     function main() {
         return __awaiter(this, void 0, void 0, function* () {
             signPlate = yield waitSignPlate();
@@ -77,15 +54,6 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
             catch (error) {
                 console.log(error);
             }
-            // try {
-            //     const carInfo: IDictionary = await getCarInfo(signPlate)
-            //     console.log(carInfo)
-            //     console.log(`tellerstandoordeel: ${carInfo["tellerstandoordeel"]}`)
-            //     console.log(`Importauto: ${carIsImported(carInfo) ? 'Ja': 'Nee'}`)
-            //     browser.runtime.sendMessage({info: carInfo})
-            // } catch (error) {
-            //     console.log(error)
-            // }
         });
     }
     if (window.hasRun) {
