@@ -31,10 +31,13 @@ browser.runtime.sendMessage({ content: ["GET_GENERALCARINFO"] })
     }
     const generalCarInfo = Object.values(response.content[1])[0];
     generalCarInfo.import = generalCarInfo["datum_eerste_toelating"] !== generalCarInfo["datum_eerste_tenaamstelling_in_nederland"] ? "Ja" : "Nee";
-    console.log(generalCarInfo.import);
     const generalCarAttributes = Object.keys(generalCarInfo);
-    const carIsImported = generalCarInfo["datum_eerste_toelating"];
-    console.log(carIsImported);
+    // set license plate on top
+    const licensePlateElement = document.getElementById("kenteken-input");
+    if (licensePlateElement !== null) {
+        licensePlateElement.setAttribute("value", generalCarInfo["kenteken"]);
+    }
+    // update attributes
     generalCarAttributes.forEach((carAttribute) => {
         console.log(`${carAttribute}: ${generalCarInfo[carAttribute]}`);
         const foundElement = document.getElementById(carAttribute);
