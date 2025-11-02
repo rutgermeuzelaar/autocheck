@@ -45,6 +45,9 @@ function listener(message: any, sender: browser.runtime.MessageSender, sendRespo
         case "SIGNPLATE":
             (async () => {
                 const signPlate: string = message.content[1]
+                if (signPlate.length === 0) {
+                    sendResponse({content: ["KO"]})
+                }
                 const generalCarInfo = await getCarInfo(signPlate)
                 if (generalCarInfo === null) {
                     sendResponse({content: ["ERROR"]})

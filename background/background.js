@@ -53,6 +53,9 @@ function listener(message, sender, sendResponse) {
         case "SIGNPLATE":
             (() => __awaiter(this, void 0, void 0, function* () {
                 const signPlate = message.content[1];
+                if (signPlate.length === 0) {
+                    sendResponse({ content: ["KO"] });
+                }
                 const generalCarInfo = yield getCarInfo(signPlate);
                 if (generalCarInfo === null) {
                     sendResponse({ content: ["ERROR"] });
