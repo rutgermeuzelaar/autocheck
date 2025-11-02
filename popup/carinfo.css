@@ -85,3 +85,21 @@ input, textarea {
 	background-color: red;
 }
 
+.kenteken-search {
+	width: 100%;
+	margin: 2% auto;
+	display: flex;
+	justify-content: center;
+	align-items: left;
+	background-color: black;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	padding: 5%;
+	font-weight: bold;
+}
+
+.kenteken-search:hover {
+	background-color: green;
+	cursor: pointer;
+}
