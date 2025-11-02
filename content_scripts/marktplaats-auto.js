@@ -48,6 +48,9 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         return __awaiter(this, void 0, void 0, function* () {
             signPlate = yield waitSignPlate();
             signPlate = signPlate.trim().replaceAll("-", "");
+            if (signPlate.length === 0) {
+                return;
+            }
             try {
                 browser.runtime.sendMessage({ content: ["SIGNPLATE", signPlate] });
             }

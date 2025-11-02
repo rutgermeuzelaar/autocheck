@@ -40,6 +40,9 @@
     async function main() {
         signPlate = await waitSignPlate()
         signPlate = signPlate.trim().replaceAll("-", "")
+        if (signPlate.length === 0) {
+            return
+        }
         try {
             browser.runtime.sendMessage({content: ["SIGNPLATE", signPlate]})
         } catch (error) {
