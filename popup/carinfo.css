@@ -23,12 +23,24 @@ table {
     width: 100%;
 }
 
+tr {
+    border-bottom: 1px solid #eeeeee;
+}
+
 th,
 td {
     font-size: 0.8rem;
-    border-bottom: 1px solid #eeeeee;
     text-align: left;
     padding: 8px 10px;
+}
+
+td {
+	margin: 5px;
+	padding: 5px 8px;
+	display: flex;
+	align-items: flex-end;
+	border-radius: 15px;
+	text-align: center;
 }
 
 hr {
