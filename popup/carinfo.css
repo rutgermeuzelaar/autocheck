@@ -31,6 +31,12 @@ td {
     padding: 8px 10px;
 }
 
+hr {
+	border: solid #9b9b9ba6 1px;
+	margin: 5% auto;
+	width: 85%;
+}
+
 details > summary {
     background-color: cornflowerblue;
     padding: 8px 5px;
