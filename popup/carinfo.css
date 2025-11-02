@@ -80,3 +80,8 @@ input, textarea {
 	padding-left: 15%;
 	text-align: center;
 }
+
+.kenteken-input:invalid {
+	background-color: red;
+}
+
