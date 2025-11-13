@@ -23,4 +23,4 @@ Autocheck is a Firefox extension that provides useful information about a car gi
 3. Let the information guide you!
 
 ## Examples
-![autocheck](https://github.com/user-attachments/assets/8abfb306-bae4-43a1-b49f-5a1ca72294c6)
+![autocheck](https://github.com/user-attachments/assets/bcb3e183-605f-4ec7-9c6c-1885131c5156)
